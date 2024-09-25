@@ -1,0 +1,34 @@
+
+<div class="jumbotron">
+    <h1 class="display-4">Bem vindo ao bog Turbo!</h1>
+    <p class="lead">This is a simple hero unit</p>
+    <hr class="my-4"/>
+    <p>It was utility classes for typography and spacing</p>
+    <p class="lead">
+        <a href="/user/registro" class="btn btn-primary btn-lg" role="button">Crie uma conta</a>
+    </p>
+</div>
+
+<hr/>
+<h2>Postagens recentes</h2>
+
+<div class="d-flex flex-row flex-wrap mb-5">
+
+    {{#each postagem}}
+    <div class="card mt-3 ml-4">
+        <div class="card-body">
+            <h3>{{titulo}}</h3>
+            <p>{{descricao}}</p>
+            <a href="/postagem/{{ slug }}">
+                <button class="btn btn-success">Leia mais</button>
+            </a>
+            <hr/>
+            <small>{{categoria.nome}}</small><br/>
+            <small>{{data}}</small>
+        </div>
+    </div>
+    {{else }}
+    <h3>Nenhum postagem</h3>
+    {{/each }}
+
+</div>

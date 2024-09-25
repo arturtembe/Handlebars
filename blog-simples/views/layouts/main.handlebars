@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog NodeJS</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body>
+    {{>_navbar }} 
+    <div class="container mt-4">
+
+        {{#if error}}
+            <div class="alert alert-danger">{{error}}</div>
+        {{else }}
+
+        {{/if }}
+
+        {{>_msg }}
+        {{{body}}} 
+    </div> 
+</body>
+{{!-- http://localhost:8081/ --}}
+<script src="/js/bootstrap.js"></script> 
+</html>
